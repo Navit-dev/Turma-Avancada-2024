@@ -6,10 +6,8 @@ import 'package:aula_01/src/pages/loading.page.dart';
 import 'package:aula_01/src/utils/utils.dart';
 import 'package:flutter/material.dart';
 
-
 void main() {
   getIt.registerSingleton<INavitTheme>(DefaultTheme());
-
   runApp(const MyApp());
 }
 

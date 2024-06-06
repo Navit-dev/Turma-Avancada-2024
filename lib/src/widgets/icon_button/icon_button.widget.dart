@@ -111,3 +111,37 @@ class IconButtonCustomPainter extends CustomPainter {
     return true;
   }
 }
+
+class NavitIconButton extends StatelessWidget {
+  final Size size;
+  final Color color;
+  final Color background;
+  final IconData icon;
+
+  const NavitIconButton({
+    super.key,
+    this.size = const Size(50, 50),
+    this.color = Colors.white,
+    this.background = Colors.white,
+    required this.icon,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: size.width,
+      height: size.height,
+      child: CustomPaint(
+        painter: IconButtonCustomPainter(
+          backgroundColor: background,
+        ),
+        child: Center(
+          child: Icon(
+            icon,
+            color: color,
+          ),
+        ),
+      ),
+    );
+  }
+}

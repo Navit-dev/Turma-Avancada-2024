@@ -70,7 +70,8 @@ class _MyHomePageState extends State<MyHomePage>
                           ),
                           Hero(
                             transitionOnUserGestures: true,
-                            tag: '$i-assets/visa-classic-recto-450x800.png-text',
+                            tag:
+                                '$i-assets/visa-classic-recto-450x800.png-text',
                             child: const Text('data').h4(),
                           ),
                         ],
@@ -130,6 +131,12 @@ class _MyHomePageState extends State<MyHomePage>
               const SizedBox(
                 height: 8,
               ),
+              // Center(
+              //   child: IconButton(
+              //     onPressed: (){},
+              //     icon: Icon(Icons.dangerous),
+              //   ),
+              // ),
             ],
           ),
         ),
@@ -165,18 +172,8 @@ class _MyHomePageState extends State<MyHomePage>
             ),
           ],
         ),
-        floatingActionButton: SizedBox(
-          width: 50,
-          height: 50,
-          child: CustomPaint(
-            painter: IconButtonCustomPainter(),
-            child: const Center(
-              child: Icon(
-                Icons.search,
-                color: Colors.white,
-              ),
-            ),
-          ),
+        floatingActionButton: const NavitIconButton(
+          icon: Icons.search,
         ),
       ),
     );
